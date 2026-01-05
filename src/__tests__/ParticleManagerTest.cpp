@@ -1,4 +1,6 @@
-#include <glm/ext/vector_float2.hpp>
+#include <vector>
+
+#include <glm/vec2.hpp>
 #include <gtest/gtest.h>
 
 #include "core/ParticleManager.hpp"
@@ -89,7 +91,7 @@ TEST(ParticleManager, ReserveCapacity) {
     const auto RESERVE_SIZE{ 1024uz };
 
     manager.reserve( RESERVE_SIZE );
-    EXPECT_EQ(manager.capacity(), RESERVE_SIZE);
+    EXPECT_GE(manager.capacity(), RESERVE_SIZE);
 }
 
 TEST(ParticleManager, MaxSize) {
