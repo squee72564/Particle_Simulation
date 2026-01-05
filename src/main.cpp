@@ -1,6 +1,6 @@
 #include <print>
 #include <glm/vec2.hpp>
-#include "ParticleManager.hpp"
+#include "core/ParticleManager.hpp"
 
  using v2 = glm::vec2;
 
