@@ -43,8 +43,8 @@ public:
 
     void pop_back();
 
-    ParticleRef operator[](size_t i);
-    const ParticleConstRef operator[](size_t i) const;
+    [[nodiscard]] ParticleRef operator[](size_t i);
+    [[nodiscard]] const ParticleConstRef operator[](size_t i) const;
 
 private:
     std::vector<glm::vec2> pos_, vel_, acc_;
