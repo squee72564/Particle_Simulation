@@ -34,12 +34,7 @@ public:
     void clear() noexcept;
 
     template <typename P, typename V, typename A>
-    void push_back(P&& p, V&& v, A&& a)
-    {
-        pos_.push_back(std::forward<P>(p));
-        vel_.push_back(std::forward<V>(v));
-        acc_.push_back(std::forward<A>(a));
-    }
+    void push_back(P&& p, V&& v, A&& a);
 
     void pop_back();
 
@@ -49,5 +44,13 @@ public:
 private:
     std::vector<glm::vec2> pos_, vel_, acc_;
 };
+
+template <typename P, typename V, typename A>
+void ParticleManager::push_back(P&& p, V&& v, A&& a)
+{
+    pos_.push_back(std::forward<P>(p));
+    vel_.push_back(std::forward<V>(v));
+    acc_.push_back(std::forward<A>(a));
+}
 
 #endif // PARTICLE_MANAGER_HPP
