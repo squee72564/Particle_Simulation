@@ -1,4 +1,4 @@
-#include "ParticleManager.hpp"
+#include "core/ParticleManager.hpp"
 
 #include <cassert>
 
